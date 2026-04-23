@@ -1,0 +1,531 @@
+body {
+    font-family: "Times New Roman", sans-serif;/* Основной шрифт страницы: сначала "Times New Roman", если недоступен — любой sans-serif */
+    background-image: url('img/texture.png');/* Фоновое изображение для всей страницы (текстура) */
+    background-repeat: repeat;/* Фон повторяется по горизонтали и вертикали */
+    background-size: auto; /* Используется исходный размер изображения без масштабирования */
+    margin: 0;/* Убирает стандартные внешние отступы браузера */
+    padding: 0;/* Убирает стандартные внутренние отступы */
+    user-select: none; /* Запрещает выделение текста пользователем */
+    -webkit-user-select: none; /* Запрет выделения текста в Chrome / Safari */
+    -moz-user-select: none;    /* Запрет выделения текста в Firefox */
+    -ms-user-select: none;    /* Запрет выделения текста в старых IE / Edge */
+   }
+
+   .header-image {
+    width: 100%;/* Ширина изображения растягивается на 100% родителя */
+    height: auto; /* Высота сохраняет пропорции изображения */
+    display: block;/* Делает изображение блочным, чтобы margin работал корректно */
+    margin: 0;   /* убрать внешний отступ */
+    padding: 0;  /* убрать внутренний отступ */
+    border: none;/* Убираем рамку вокруг изображения */
+  }
+
+  
+   .frame-container {
+    background-image: url('img/left.png'), url('img/right.png');  /* Два фоновых изображения: левое и правое (рамки) */
+    background-repeat: repeat-y, repeat-y;/* Оба изображения повторяются только по вертикали */
+    background-position: left calc(100% - 992px), right calc(100% - 992px);  /* Левое изображение прижато к левому краю, правое — к правому. Оба смещены по вертикали вниз на (100% - 992px), чтобы совпадать с центральным контентом */
+    background-size: 2.26% auto, 2.26% auto; /* Ширина каждой рамки — 2.26% контейнера, высота автоматически */
+    padding-left: 10px; /* Внутренний отступ слева, чтобы контент не прилипал к рамке */
+    padding-right: 10px; /* Внутренний отступ справа */
+    margin: 0; /* Убирает внешние отступы контейнера */
+    padding-top: 0; /* Явно задаёт отсутствие верхнего внутреннего отступа */
+}
+
+  
+  .main {  
+    width: 80%;/*  устанавливает ширину блока на 80% от ширины его родительского элемента (обычно body) */
+    margin: 0 auto; /* Центрирует блок по горизонтали (auto слева и справа).*/
+  }
+
+  .nav-container {
+    position: absolute;/* Абсолютное позиционирование относительно body или ближайшего родителя */
+    top: 70px; /* Отступ от верхнего края страницы */
+    left: 0; /* Прижатие к левому краю */
+    width: 100%; /* Контейнер навигации на всю ширину экрана */
+    display: flex;/* Включает flexbox для размещения кнопок */
+    justify-content: space-between;/* Раздвигает элементы: один слева, другой справа */
+    padding: 0 75px; /* Внутренние отступы: 0 сверху/снизу, 75px слева/справа */
+    box-sizing: border-box;  /* Padding учитывается внутри ширины, не увеличивая её */
+}
+
+.nav-button {
+    font-size: 1.5em; /* Размер текста кнопки (1.5 от базового размера) */
+    padding: 10px 25px;  /* Внутренние отступы для удобного клика */
+    background-color: white;  /* Белый фон кнопки */
+    border: solid skyblue;/* Рамка голубого цвета */
+    border-width: 1px;/* Толщина рамки 1px */
+    border-radius: 5px; /* Скруглённые углы кнопки */
+    font-family: "Times New Roman", sans-serif; /* Декоративный шрифт кнопки с запасным вариантом */
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 600px) {
+    .nav-container {
+        top: 20px;/* Навигация располагается ближе к верху экрана */
+        padding: 0 17px;/* Уменьшенные боковые отступы для маленького экрана */
+    }
+
+    .nav-button {
+        font-size: 0.8em;/* Уменьшенный размер текста кнопок */
+        padding: 1px 1px;/* Минимальные отступы, чтобы кнопки были компактными */
+    } 
+}
+ 
+
+.grid-container {
+    display: grid;/* Включает CSS Grid — контейнер становится сеткой */
+    grid-template-columns: repeat(3, 1fr);  /* Создаёт 3 колонки одинаковой ширины: 1fr = 1 доля доступного пространства */
+    gap: 10px; /* Расстояние между элементами сетки (и по горизонтали, и по вертикали) */
+    width: 90%; /* Ширина контейнера — 90% от родительского элемента */
+    margin: auto; /* Автоматические отступы слева и справа → контейнер центрируется */
+    padding: 10px; /* Внутренний отступ внутри grid-контейнера */
+
+  }
+
+    /* мобильная версия */
+@media (max-width: 768px) {
+ 
+  .item:nth-child(3) { order: 1; } /* Третий элемент отображается первым *//* Свойство order меняет визуальный порядок элементов, не затрагивая HTML-разметку */
+  .item:nth-child(2) { order: 2; }
+  .item:nth-child(1) { order: 3; }
+  .item:nth-child(6) { order: 4; }
+  .item:nth-child(5) { order: 5; }
+  .item:nth-child(4) { order: 6; }
+  .item:nth-child(9) { order: 7; }
+  .item:nth-child(8) { order: 8; }
+  .item:nth-child(7) { order: 9; }
+ 
+}
+
+@media (max-width: 768px) {
+  .item {
+    width: 75vw;      /* Ширина элемента — 75% от ширины экрана (viewport width) */
+    max-width: 75vw;   /* Ограничивает максимальную ширину, чтобы элемент не растягивался */
+    min-height: auto;
+   max-height: fit-content;
+  }
+}
+  
+  .item {
+   
+    background-color: transparent;/* Прозрачный фон элемента */
+    padding: 10px; /* Внутренние отступы для контента */
+    text-align: center; /* Центрирование текста по горизонтали (влияет на верхнюю цифру)*/
+    border: 3px ridge #037a9b; /* Объёмная рамка (ridge) толщиной 5px */
+    box-shadow: inset 10px 65px 90px lightblue; /* Внутренняя тень: создаёт эффект подсветки изнутри */
+  border-top-left-radius: 50%; /* Скругление верхнего левого угла */
+  border-top-right-radius: 50%; /* Скругление верхнего правого угла */
+  border-bottom-left-radius: 0;  /* Нижний левый угол без скругления */
+  border-bottom-right-radius: 0;  /* Нижний правый угол без скругления */
+  overflow: hidden; /* Скрывает всё, что выходит за пределы элемента (важно при скруглениях и тенях) */
+  min-height: auto; /* блок подстраивается под контент */
+  max-height: fit-content;
+  box-sizing: border-box;
+ 
+  }
+  
+  .item-number {
+    font-size: clamp(2.5rem, 4vw, 5rem);
+    color: #037a9b; /* яркий цвет цифры */
+    font-weight: bold; /* Жирное начертание */
+    text-align:center; /* Центрирование текста */
+     
+  }
+  
+  .item-link {
+    color: #04475a;  /* Основной цвет ссылки */
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    text-decoration: none; /* Убирает стандартное подчёркивание ссылки */
+  }
+  
+  .item-link:hover {
+    color: red;/* Цвет ссылки при наведении */
+  }
+  
+
+  ul {
+    list-style: none;/* Убираем стандартные маркеры списка (точки, кружки) */
+    margin-right: 5%;/* 5% считается от ширины родителя (.item)*/
+    padding: 0;  /* Убираем внутренний отступ списка*/
+    text-align:right; /* Выравнивание текста по правому краю */
+    direction: rtl; /* направление письма справа налево */
+   
+  }
+
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: bold;/* Жирное начертание текста */
+    text-align: center;/* Выравнивание по центру */
+    color: #03092b; /* Цвет текста */
+    margin: 0;   /* Убираем стандартные внешние отступы заголовка */
+    direction: rtl; /* направление письма справа налево */
+}
+
+
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+    text-align: center; /* Центрирование текста */
+    color: black; /* Цвет текста */
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  text-align: center;/* Центрирование текста */
+  color: black; /* Цвет текста */
+  margin: 0;   /* убрать внешний отступ */
+  padding: 0.1em;  /* Небольшой внутренний отступ для эстетики */
+  font-weight:normal; /* Обычное начертание (не жирное) */
+  direction: rtl; /* направление письма справа налево */
+}
+
+
+.rules{
+  font-size: clamp(1rem, 2.5vw, 1.5rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.5rem, между — плавно растёт */
+  color: #04475a; /* Цвет текста */
+  margin-right: 8%;/* Внешний отступ справа */
+  margin-left: 8%;;/* Внешний отступ слева */
+  margin-bottom: 0px; /* отступ снизу */
+  text-align: right;/* выравнивание по правому краю */
+  direction: rtl; /* направление письма справа налево */
+}
+
+.content {
+   
+    background-color: transparent;/* Контейнер без фона */
+    border-radius: 8px; /* Делает скруглённые углы с радиусом 8 пикселей*/
+    border: double #407586;/* Двойная рамка вокруг блока */
+    margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+table {
+    width: 100%; /* Таблица растягивается на всю ширину контейнера */   
+    border-collapse: collapse; /* Убираем расстояние между ячейками (Без этого свойства браузер будет рисовать двойные линии между ячейками)*/
+    text-align: center; /* Центрирует текст внутри таблицы, действует на содержимое table, но его могут переопределить стили td и th. */
+    
+}
+
+table, th, td {
+    border: 1px solid #407586; /* Одинаковая рамка вокруг таблицы и ячеек */
+    overflow: auto; /* Важно для корректной работы sticky */
+}
+
+td {
+    padding: 4px; /* Внутренние отступы в ячейках */
+    background-color: transparent; /* Ячейки без фона */
+    width: 4.76%; /* Ячейки занимают равную ширину */
+    vertical-align: middle; /* Выравнивание содержимого по вертикали посередине */
+    text-align: center; /* Центрирование текста по горизонтали */
+}
+
+
+td:lang(ru) {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.25rem, между — плавно растёт */
+    font-family: 'Times New Roman', sans-serif;/* Шрифт для русского текста */
+    color: #04475a; /* Цвет текста */   
+}
+
+td:lang(ar) {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.5rem, между — плавно растёт */
+    font-family: 'Times New Roman', serif; /* Шрифт для арабского текста */
+    direction: rtl; /* направление письма справа налево */
+    color: #04475a; /* Цвет текста */
+}
+
+
+
+th {
+  position: sticky;/* Заголовки "прилипают" к верхней части при прокрутке таблицы */
+  top: 0; /* При прокрутке строка будет "прилипать" к верхней части */
+  background-color: rgb(184, 215, 228); /* Цвет фона заголовков */
+  z-index: 1; /* Чтобы заголовки отображались поверх остальных элементов */
+  box-shadow: 0 0 0 1px #407586; /* Имитация границы */
+  font-family: 'Times New Roman', sans-serif;
+  color: #04475a; /* Цвет текста */
+}
+
+/* Делаем весь thead "прилипающим" */
+thead {
+  position: sticky;
+  top: 0; /* Прилипает к верху viewport */
+  z-index: 10; /* Высокий z‑index, чтобы быть поверх других элементов */
+}
+
+
+
+button[lang="ar"] {
+    font-family: 'Times New Roman', sans-serif; /* Шрифты с полноценной поддержкой арабского письма: Amiri, Scheherazade New, Noto Naskh Arabic — приоритет, далее системные fallback */
+    font-size: clamp(1.4rem, 3vw, 2rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.5rem, между — плавно растёт */
+    direction: rtl; /* направление письма справа налево */
+      background-color: transparent; /* Прозрачный фон кнопки */
+      border: 1px solid #9ebee26c;/* Полупрозрачная рамка */
+      border-radius: 12px;/* Скруглённые углы кнопки */
+      z-index: 1;/* Поднимает кнопку над соседними элементами */
+      cursor: pointer;/* Курсор-указатель при наведении */
+}
+
+button[lang="ru"] {
+  font-family: 'Times New Roman', sans-serif; /* Классические шрифты для кириллицы */
+  font-size: clamp(1rem, 2.5vw, 1.25rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.25rem, между — плавно растёт */
+    background-color: transparent; /* Прозрачный фон кнопки */
+    border: 1px solid #06182c6c;/* Полупрозрачная рамка */
+    border-radius: 12px;/* Скруглённые углы кнопки */
+    z-index: 1;/* Поднимает кнопку над соседними элементами */
+    cursor: pointer;/* Курсор-указатель при наведении */
+    color: #04475a; /* Цвет текста */
+}
+
+button:hover {
+    transform: scale(1.2); /* Увеличение кнопки при наведении курсора */
+}
+
+
+.image-btn {
+    width: 60px; /* Ширина кнопки с изображением */
+    height: 60px; /* Высота кнопки с изображением */
+    border: none;/* Убираем рамку */
+    background-color: transparent;  /* Прозрачный фон */
+    cursor: pointer;/* Курсор-указатель при наведении */
+    display: inline-block; /* Строчно-блочное отображение */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Плавная анимация масштабирования и фильтров */
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .image-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.image-btn img {
+    width: 100%; /* Изображение занимает всю ширину кнопки */
+    height: 100%; /* Изображение занимает всю высоту кнопки */
+}
+
+.image-btn:hover img {
+    transform: scale(2.2); /* Увеличиваем изображение при наведении */
+}
+
+
+.vocabulary tr,
+.vocabulary td,
+.vocabulary {
+  /* Базовые стили (всегда применяются) */
+  border: none;          /* Удаляет все рамки */
+  border-collapse: collapse;
+  text-align: center; 
+  font-size: clamp(1.4rem, 3vw, 2rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.25rem, между — плавно растёт */
+  padding: 5px; /* Внутренние отступы в ячейках */
+  direction: rtl; /* направление письма справа налево */
+  
+}
+
+.vocabulary {
+  width: 60%;
+  max-width: 300px;
+  text-align: center; 
+  margin: auto; /* <-- ЭТО ГЛАВНОЕ: центрирует таблицу */
+}
+
+.test {
+  /* Базовые стили (всегда применяются) */
+  width: 1000px;
+  max-width: 95.5%;
+  height: auto;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+/* Мобильные устройства (ширина экрана ≤ 768px) */
+@media (max-width: 1000px) {
+  .test {
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+
+/* Центрирование */
+.center {
+  text-align: center;
+}
+
+/* Кнопка слова */
+#word-button {
+  display: block;
+  margin: 10px auto;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.25rem, между — плавно растёт */
+  padding: 10px 20px;
+  font-family: "Times New Roman", sans-serif;
+}
+
+/* Варианты ответов */
+#options {
+  margin: 0 auto;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 0.15fr);
+  justify-content: center;    /* сетка по центру контейнера */
+  justify-items: center;
+  
+}
+
+#options button {
+  font-family: "Times New Roman", sans-serif;
+  font-size: clamp(1.3rem, 2.7vw, 2rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.25rem, между — плавно растёт */
+  margin: 5px;
+  padding: 5px;
+  color: #04475a; /* Цвет текста */
+}
+
+/* Результат и счёт */
+#result,
+#score {
+  margin-top: 20px;
+  font-size: clamp(1rem, 1.5vw, 1.7rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.25rem, между — плавно растёт */
+}
+
+.result-correct {
+  color: green;
+  font-family: "Times New Roman", sans-serif;
+  
+}
+
+.result-wrong {
+  color: red;
+  font-family: "Times New Roman", sans-serif;
+
+}
+
+#options button:disabled {
+  background-color: #ccc;
+  color: rgb(31, 30, 30);
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* Кнопка «Дальше» */
+.next-button {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-family: "Times New Roman", sans-serif;
+  background-color: transparent; /* Прозрачный фон кнопки */
+  border: 1px solid #bdb082;/* Полупрозрачная рамка */
+    border-radius: 12px;/* Скруглённые углы кнопки */
+    font-size: clamp(1rem, 2.5vw, 1.5rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.25rem, между — плавно растёт */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    position: relative;/* Родительский контейнер для абсолютного позиционирования контента */
+    z-index: 10; /* Поднимает футер выше других элементов страницы */
+    width: 100%;/* Футер занимает всю ширину экрана */
+    overflow: hidden;/* Обрезает всё, что выходит за пределы футера */
+    justify-content: center; /* горизонтальное центрирование */
+  }
+  
+  .footer-image {
+    width: 100%;/* Изображение растягивается на всю ширину футера */
+    height: auto;/* Высота сохраняет пропорции изображения */
+    display: block;/* Убирает лишние отступы, присущие inline-изображениям */
+  }
+  
+  .footer-content {
+    position: absolute; /* Позволяет размещать текст поверх изображения */
+    bottom: 27%; /* Позиционирование от низа — надёжнее на мобильных */
+    left: 50%;
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.7rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.5rem, между — плавно растёт */
+    background-color: transparent; /* Прозрачный фон */
+    padding: 2px; /* Внутренние отступы вокруг текста */
+   
+  }
+
+  .footer-content11 {
+    position: absolute;/* Второй текстовый блок поверх изображения */
+    bottom: clamp(10%, 40%, 70%); /* Позиционирование от низа — надёжнее на мобильных */
+    max-width: 78%; /* Основная ширина */
+    margin-left: auto; /* Центрирование */
+    margin-right: auto; /* Центрирование */
+    left: 0;
+    right: 0;
+    text-align: center;
+    direction: rtl;
+    font-family: "Times New Roman", serif;/*  шрифт */
+    font-size: clamp(1rem, 2.5vw, 1.7rem);/* на мобил — не меньше 1rem, на больших экранах — не больше 1.5rem, между — плавно растёт */
+    background-color: transparent;/* Прозрачный фон */
+    padding: 0px;/* Внутренние отступы */
+  }
+  
+  .footer-content2 {
+    position: absolute;/* Второй текстовый блок поверх изображения */
+    bottom: 9%; /* Позиционирование от низа — надёжнее на мобильных */
+    left: 50%;
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+    text-align: center;
+    font-family: "Times New Roman", serif;/*  шрифт */
+    line-height: 1.4;/* Межстрочный интервал для лучшей читаемости */
+    font-size: clamp(0.5rem, 1.8vw, 1.5rem);/* на мобилке — не меньше 1rem, на больших экранах — не больше 1.5rem, между — плавно растёт */
+    background-color: transparent;/* Прозрачный фон */
+    padding: 3px;/* Внутренние отступы */
+
+  }
+
+
+  .footer-content a {
+    color: black;/* Цвет ссылок совпадает с основным текстом */
+    text-decoration: none;/* Убираем подчёркивание */
+    margin: 0 5px;/* Горизонтальные отступы между ссылками */
+   
+  }
+
+  .footer-content a:hover {
+    text-decoration: underline;/* Подчёркивание при наведении */
+  }
+ 
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* одна колонка на маленьком экране */
+    display: flex;
+    flex-direction: column; /* или row, если нужно по горизонтали */
+    align-items: center;     /* Центрирование по горизонтали */ 
+  }
+
+
+  .footer-content p {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .footer-content a {
+    margin: 0; /* убираем горизонтальные отступы */
+    font-size: 2vw;
+  }
+
+}
+
+

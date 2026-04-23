@@ -1,0 +1,156 @@
+window.onload = function () {
+    const words = [
+        {"ru":"учёба","ar":"دراسة","audio":"../audio/учёба.mp3"},
+        {"ru":"учебник","ar":"مقرر","audio":"../audio/учебник.mp3"},
+        {"ru":"словарь","ar":"قاموس","audio":"../audio/словарь.mp3"},
+        {"ru":"профессия","ar":"مهنة","audio":"../audio/профессия.mp3"},
+        {"ru":"специальность","ar":"تخصص","audio":"../audio/специальность.mp3"},
+        {"ru":"школа","ar":"مدرسة","audio":"../audio/школа.mp3"},
+        {"ru":"университет","ar":"جامعة","audio":"../audio/университет.mp3"},
+        {"ru":"учитель","ar":"مدرس","audio":"../audio/учитель.mp3"},
+        {"ru":"профессор","ar":"أستاذ","audio":"../audio/профессор.mp3"},
+        {"ru":"учёный","ar":"عالم","audio":"../audio/учёный.mp3"},
+        {"ru":"врач","ar":"طبيب","audio":"../audio/врач.mp3"},
+        {"ru":"инженер","ar":"مهندس","audio":"../audio/инженер.mp3"},
+        {"ru":"адвокат","ar":"محام","audio":"../audio/адвокат.mp3"},
+        {"ru":"фермер","ar":"مزارع","audio":"../audio/фермер.mp3"},
+        {"ru":"рабочий","ar":"عامل","audio":"../audio/рабочий.mp3"},
+        {"ru":"медсестра","ar":"ممرضة","audio":"../audio/медсестра.mp3"},
+        {"ru":"журналист","ar":"صحفي","audio":"../audio/журналист.mp3"},
+        {"ru":"переводчик","ar":"مترجم","audio":"../audio/переводчик.mp3"},
+        {"ru":"пекарь","ar":"خباز","audio":"../audio/пекарь.mp3"},
+        {"ru":"продавец","ar":"بائع","audio":"../audio/продавец.mp3"},
+        {"ru":"плотник","ar":"نجار","audio":"../audio/плотник.mp3"},
+        {"ru":"водитель","ar":"سائق","audio":"../audio/водитель.mp3"},
+        {"ru":"повар","ar":"طباخ","audio":"../audio/повар.mp3"},
+        {"ru":"бухгалтер","ar":"محاسب","audio":"../audio/бухгалтер.mp3"},
+        {"ru":"фотограф","ar":"مصور","audio":"../audio/фотограф.mp3"},
+        {"ru":"художник","ar":"فنان","audio":"../audio/художник.mp3"},
+        {"ru":"певец","ar":"مغني","audio":"../audio/певец.mp3"},
+        {"ru":"парикмахер","ar":"حلاق","audio":"../audio/парикмахер.mp3"},
+        {"ru":"корреспондент","ar":"مراسل","audio":"../audio/корреспондент.mp3"},
+        {"ru":"пилот","ar":"طيار","audio":"../audio/пилот.mp3"},
+        {"ru":"солдат","ar":"جندي","audio":"../audio/солдат.mp3"},
+        {"ru":"директор","ar":"مدير","audio":"../audio/директор.mp3"},
+        {"ru":"пожарный","ar":"إطفائي","audio":"../audio/пожарный.mp3"},
+        {"ru":"следователь","ar":"محقق","audio":"../audio/следователь.mp3"},
+        {"ru":"архитектор","ar":"معماري","audio":"../audio/архитектор.mp3"},
+        {"ru":"инспектор","ar":"مفتش","audio":"../audio/инспектор.mp3"},
+        {"ru":"ассистент","ar":"مساعد","audio":"../audio/ассистент.mp3"},
+        {"ru":"сотрудник","ar":"موظف","audio":"../audio/сотрудник.mp3"},
+        {"ru":"консультант","ar":"مستشار","audio":"../audio/консультант.mp3"},
+        {"ru":"строитель","ar":"بناء","audio":"../audio/строитель.mp3"},
+        {"ru":"писатель","ar":"كاتب","audio":"../audio/писатель.mp3"},
+        {"ru":"президент","ar":"رئيس","audio":"../audio/президент.mp3"},
+        {"ru":"риэлтор","ar":"سمسار","audio":"../audio/риэлтор.mp3"},
+        {"ru":"техник","ar":"فني","audio":"../audio/техник.mp3"},
+        {"ru":"охранник","ar":"حارس","audio":"../audio/охранник.mp3"},
+        {"ru":"продюсер","ar":"منتج","audio":"../audio/продюсер.mp3"},
+        {"ru":"исследователь","ar":"باحث","audio":"../audio/исследователь.mp3"},
+        {"ru":"актёр","ar":"ممثل","audio":"../audio/актёр.mp3"},
+        {"ru":"официант","ar":"نادل","audio":"../audio/официант.mp3"},
+        {"ru":"танцор","ar":"راقص","audio":"../audio/танцор.mp3"},
+        {"ru":"уборщик","ar":"عامل نظافة","audio":"../audio/уборщик.mp3"},
+        {"ru":"пастух","ar":"راعي","audio":"../audio/пастух.mp3"},
+        {"ru":"ветеринар","ar":"بيطري","audio":"../audio/ветеринар.mp3"},
+        {"ru":"ювелир","ar":"صائغ","audio":"../audio/ювелир.mp3"},
+        {"ru":"шпион","ar":"جاسوس","audio":"../audio/шпион.mp3"},
+        {"ru":"вор","ar":"سارق","audio":"../audio/вор.mp3"},
+        {"ru":"убийца","ar":"قاتل","audio":"../audio/убийца.mp3"},
+        {"ru":"мошенник","ar":"محتال","audio":"../audio/мошенник.mp3"}
+        
+    ];
+
+    let correctWord = null;
+    let hasAnswered = false;
+    let correctCount = 0;
+    let wrongCount = 0;
+
+    const optionsContainer = document.getElementById("options");
+    const resultBox = document.getElementById("result");
+    const scoreBox = document.getElementById("score");
+    const wordButton = document.getElementById("word-button");
+
+    const nextButton = document.createElement("button");
+    nextButton.textContent = "🌿 التالي";
+    nextButton.className = "next-button";
+
+    document
+        .getElementById("next-button-container")
+        .appendChild(nextButton);
+
+    nextButton.onclick = () => {
+        hasAnswered = false;
+        nextButton.style.display = "none";
+        renderQuestion();
+    };
+
+    function updateScore() {
+        scoreBox.textContent = `✅: ${correctCount} | ❌: ${wrongCount}`;
+    }
+
+    function getRandomWord() {
+        return words[Math.floor(Math.random() * words.length)];
+    }
+
+    function shuffle(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+    function getOptions(correct) {
+        const list = [correct];
+        while (list.length < 9 && list.length < words.length) {
+            const w = getRandomWord();
+            if (!list.includes(w)) list.push(w);
+        }
+        return shuffle(list);
+    }
+
+    function renderQuestion() {
+        correctWord = getRandomWord();
+        const options = getOptions(correctWord);
+
+        optionsContainer.innerHTML = "";
+        resultBox.textContent = "";
+        resultBox.classList.remove("result-correct", "result-wrong");
+
+        wordButton.textContent = correctWord.ru;
+        wordButton.onclick = () => {
+            new Audio(correctWord.audio).play();
+        };
+
+        options.forEach(option => {
+            const btn = document.createElement("button");
+            btn.textContent = option.ar;
+            btn.lang = "ar";
+            btn.onclick = () => checkAnswer(option);
+            optionsContainer.appendChild(btn);
+        });
+    }
+
+    function checkAnswer(selected) {
+        if (hasAnswered) return;
+        hasAnswered = true;
+
+        document
+            .querySelectorAll("#options button")
+            .forEach(b => b.disabled = true);
+
+        if (selected === correctWord) {
+            resultBox.textContent = "✅ صح";
+            resultBox.classList.add("result-correct");
+            correctCount++;
+        } else {
+            resultBox.innerHTML =
+                `<span dir="rtl" lang="ar">❌ خطأ. الإجابة الصحيحة: ${correctWord.ar}</span>`;
+            resultBox.classList.add("result-wrong");
+            wrongCount++;
+        }
+
+        updateScore();
+        nextButton.style.display = "inline-block";
+    }
+
+    renderQuestion();
+    updateScore();
+};
