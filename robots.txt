@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://forasart.github.io/learning_russian/sitemap.xml
