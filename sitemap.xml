@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная -->
+  <url>
+    <loc>https://forasart.github.io/learning_russian/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- LESSON 01 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson01/topic01.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson01/topic01.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson01/topic01.3.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson01/praxis01.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson01/praxis01.2.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 02 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/topic02.1.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- Praxis -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/praxis02.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/praxis02.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/praxis02.3.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- Vocabulary -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-animals.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-body.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-clothes.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-family.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-food.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-house.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-policy.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-professions.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-time.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-trips.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-proverbs.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/vocabulary-idioms.html</loc><lastmod>2026-04-23</lastmod></url>
+
+
+  <!-- Tests -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-animals.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-body.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-clothes.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-family.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-food.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-house.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-policy.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-professions.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-time.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-listening-trips.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-animals.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-body.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-clothes.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-family</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-food.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-house.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-policy.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-professions.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-time.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-translation-trips.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-animals.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-body.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-clothes.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-family.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-food.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-house.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-policy.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-professions.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-time.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson02/test-vocabulary-writing-trips.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 03 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson03/topic03.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson03/praxis03.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson03/praxis03.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson03/praxis03.3.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson03/praxis03.4.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 04 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson04/topic04.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson04/praxis04.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson04/praxis04.3.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson04/praxis04.4.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 05 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson05/topic05.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson05/topic05.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson05/praxis05.3.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson05/praxis05.4.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 06 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson06/topic06.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson06/praxis06.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson06/praxis06.2.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 07 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson07/topic07.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson07/topic07.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson07/praxis07.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson07/praxis07.2.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 08 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson08/topic08.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson08/topic08.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson08/praxis08.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson08/praxis08.2.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- LESSON 09 -->
+  <url><loc>https://forasart.github.io/learning_russian/lesson09/topic09.1.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson09/topic09.2.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson09/praxis09.3.html</loc><lastmod>2026-04-23</lastmod></url>
+  <url><loc>https://forasart.github.io/learning_russian/lesson09/praxis09.4.html</loc><lastmod>2026-04-23</lastmod></url>
+
+  <!-- Дополнительные страницы -->
+ 
+
+</urlset>
